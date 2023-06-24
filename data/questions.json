@@ -1,0 +1,113 @@
+[
+    {
+      "question": "What is the capital city of Australia?",
+      "options": [
+        "Sydney",
+        "Canberra",
+        "Melbourne",
+        "Perth"
+      ],
+      "correctOption": "Canberra",
+      "score": 10
+    },
+    {
+      "question": "Which planet is known as the Red Planet?",
+      "options": [
+        "Mars",
+        "Venus",
+        "Jupiter",
+        "Saturn"
+      ],
+      "correctOption": "Mars",
+      "score": 10
+    },
+    {
+      "question": "Who is the author of the Harry Potter book series?",
+      "options": [
+        "J.K. Rowling",
+        "Stephen King",
+        "George R.R. Martin",
+        "Dan Brown"
+      ],
+      "correctOption": "J.K. Rowling",
+      "score": 10
+    },
+    {
+      "question": "What is the largest ocean in the world?",
+      "options": [
+        "Pacific Ocean",
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean"
+      ],
+      "correctOption": "Pacific Ocean",
+      "score": 10
+    },
+    {
+      "question": "Which country is known for producing the most coffee in the world?",
+      "options": [
+        "Brazil",
+        "Colombia",
+        "Vietnam",
+        "Ethiopia"
+      ],
+      "correctOption": "Brazil",
+      "score": 10
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "options": [
+        "Leonardo da Vinci",
+        "Pablo Picasso",
+        "Vincent van Gogh",
+        "Michelangelo"
+      ],
+      "correctOption": "Leonardo da Vinci",
+      "score": 10
+    },
+    {
+      "question": "Which animal is known as the 'King of the Jungle'?",
+      "options": [
+        "Lion",
+        "Tiger",
+        "Elephant",
+        "Giraffe"
+      ],
+      "correctOption": "Lion",
+      "score": 10
+    },
+    {
+      "question": "What is the chemical symbol for the element Gold?",
+      "options": [
+        "Go",
+        "Gd",
+        "Au",
+        "Ag"
+      ],
+      "correctOption": "Au",
+      "score": 10
+    },
+    {
+      "question": "Who is the lead vocalist of the band 'Queen'?",
+      "options": [
+        "Freddie Mercury",
+        "John Lennon",
+        "Paul McCartney",
+        "Mick Jagger"
+      ],
+      "correctOption": "Freddie Mercury",
+      "score": 10
+    },
+    {
+      "question": "Which sport is known as the 'gentleman's game'?",
+      "options": [
+        "Cricket",
+        "Football",
+        "Tennis",
+        "Golf"
+      ],
+      "correctOption": "Cricket",
+      "score": 10
+    }
+  ]
+  
