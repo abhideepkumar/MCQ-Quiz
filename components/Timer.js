@@ -1,25 +1,22 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
-const Timer = ({ time, onTimeout }) => {
-  const [seconds, setSeconds] = useState(time);
-
+const Timer = ({ time, onTimeExpired, setTime }) => {
   useEffect(() => {
-    const interval = setInterval(() => {
-      setSeconds((prevSeconds) => {
-        if (prevSeconds === 0) {
-          clearInterval(interval);
-          onTimeout(); // Trigger callback function when timer reaches 0
-        }
-        return prevSeconds - 1;
-      });
-    }, 1000);
+    let timerId;
+    if (time > 0) {
+      timerId = setInterval(() => {
+        setTime(time - 1);
+      }, 1000);
+    } else {
+      onTimeExpired();
+    }
 
     return () => {
-      clearInterval(interval);
+      clearInterval(timerId);
     };
-  }, [time, onTimeout]);
+  }, [time, onTimeExpired, setTime]);
 
-  return <div>{seconds}s</div>;
+  return <div>{time}</div>;
 };
 
 export default Timer;
