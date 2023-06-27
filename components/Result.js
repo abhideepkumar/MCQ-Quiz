@@ -1,19 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import connectDB from "@/middleware/db";
 
 const Result = ({ participant }) => {
+  const [signal,setSignal]=useState("text-gray-400")
   const { name, email, usn, score } = participant;
 
   useEffect(() => {
-    // Send participant data when the component renders
     const sendParticipantData = async () => {
       console.log("Sending participant data");
       console.log(participant);
-
-      // Connect to the database
-      connectDB();
-
       try {
+        connectDB();
         const response = await fetch("/api/save", {
           method: "POST",
           headers: {
@@ -24,6 +21,7 @@ const Result = ({ participant }) => {
 
         if (response.ok) {
           console.log("Participant data saved successfully");
+          setSignal("text-gray-400 hidden")
         } else {
           console.error("Failed to save participant data");
         }
@@ -32,7 +30,6 @@ const Result = ({ participant }) => {
       }
     };
 
-    // Call the function to send participant data
     sendParticipantData();
   }, []);
 
@@ -51,6 +48,8 @@ const Result = ({ participant }) => {
       <p>
         Score: <strong>{score}</strong> out of <strong>100</strong>
       </p>
+      <hr className={signal}/>
+      <p className={signal}>Sending result. Do not close or switch tab.</p>
     </div>
   );
 };

@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 
 const ParticipantForm = ({ onSubmit }) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [usn, setUsn] = useState('');
+  const [formData, setFormData] = useState({ name: '', email: '', usn: '' });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ name, email, usn });
+    onSubmit(formData);
   };
 
   return (
@@ -20,9 +26,10 @@ const ParticipantForm = ({ onSubmit }) => {
         <input
           type="text"
           id="name"
+          name="name"
           className="w-full p-2 border border-gray-300 rounded"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={formData.name}
+          onChange={handleChange}
           required
         />
       </div>
@@ -33,9 +40,10 @@ const ParticipantForm = ({ onSubmit }) => {
         <input
           type="email"
           id="email"
+          name="email"
           className="w-full p-2 border border-gray-300 rounded"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={formData.email}
+          onChange={handleChange}
           required
         />
       </div>
@@ -46,9 +54,10 @@ const ParticipantForm = ({ onSubmit }) => {
         <input
           type="text"
           id="usn"
+          name="usn"
           className="w-full p-2 border border-gray-300 rounded"
-          value={usn}
-          onChange={(e) => setUsn(e.target.value)}
+          value={formData.usn}
+          onChange={handleChange}
           required
         />
       </div>

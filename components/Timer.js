@@ -3,9 +3,10 @@ import { useEffect } from 'react';
 const Timer = ({ time, onTimeExpired, setTime }) => {
   useEffect(() => {
     let timerId;
+
     if (time > 0) {
       timerId = setInterval(() => {
-        setTime(time - 1);
+        setTime(prevTime => prevTime - 1);
       }, 1000);
     } else {
       onTimeExpired();
