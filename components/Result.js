@@ -1,35 +1,39 @@
 import { useEffect } from "react";
 import connectDB from "@/middleware/db";
+
 const Result = ({ participant }) => {
   const { name, email, usn, score } = participant;
-  useEffect(() => {
-    // Sending participant data when the component renders
-    const sendmadi = async () => {
-      console.log("sent madi");
-      const participantDatas = {
-        name,
-        email,
-        usn,
-        score,
-      };
-      console.log("Data sent:", participantDatas);
-      connectDB();
-      const response = await fetch("/api/save", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ participantDatas }),
-      });
 
-      if (response.ok) {
-        console.log("Participant data saved successfully");
-      } else {
-        console.error("Failed to save participant data");
+  useEffect(() => {
+    // Send participant data when the component renders
+    const sendParticipantData = async () => {
+      console.log("Sending participant data");
+      console.log(participant);
+
+      // Connect to the database
+      connectDB();
+
+      try {
+        const response = await fetch("/api/save", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(participant),
+        });
+
+        if (response.ok) {
+          console.log("Participant data saved successfully");
+        } else {
+          console.error("Failed to save participant data");
+        }
+      } catch (error) {
+        console.error("Error while sending participant data:", error);
       }
     };
 
-    sendmadi();
+    // Call the function to send participant data
+    sendParticipantData();
   }, []);
 
   return (

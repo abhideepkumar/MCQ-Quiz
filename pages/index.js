@@ -17,7 +17,7 @@ const IndexPage = () => {
     // Shuffle the questions when the component mounts
     const shuffledQuestions = shuffleArray(questionsData);
     setQuestions(shuffledQuestions);
-    //starting mongodb server
+    // Start the MongoDB server
     connectDB();
   }, []);
 
@@ -28,16 +28,16 @@ const IndexPage = () => {
       const isCorrect = question.correctOption === participantAnswer;
       return total + (isCorrect ? question.score : 0);
     }, 0);
-  
+
     // Update the participant's data with the score
     const participantWithScore = {
       ...participantData,
       score: participantScore,
     };
-  
+
     // Set the participant's data
     setParticipant(participantWithScore);
-  };  
+  };
 
   const handleAnswerSubmit = (selectedOption) => {
     const currentCorrectOption = questions[currentQuestion].correctOption;
@@ -77,16 +77,19 @@ const IndexPage = () => {
     }
     return shuffledArray;
   };
+
   return (
     <div className="container mx-auto p-4">
       {participant ? (
         currentQuestion >= 0 ? (
           <div>
+            {/* Display the question and answer options */}
             <Question
               key={currentQuestion}
               question={questions[currentQuestion]}
               onAnswerSubmit={handleAnswerSubmit}
             />
+            {/* Display the timer */}
             <Timer
               time={timeRemaining}
               onTimeExpired={handleTimeExpired}
@@ -94,12 +97,12 @@ const IndexPage = () => {
             />
           </div>
         ) : (
-          participant.score=score,
-          <Result
-            participant={participant}
-          />
+          /* Display the result with the participant's score */
+          (participant.score = score),
+          <Result participant={participant} />
         )
       ) : (
+        /* Display the participant form */
         <ParticipantForm onSubmit={handleSubmitParticipant} />
       )}
     </div>
