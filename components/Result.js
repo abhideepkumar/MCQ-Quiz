@@ -10,7 +10,7 @@ const Result = ({ participant }) => {
       console.log("Sending participant data");
       console.log(participant);
       try {
-        connectDB();
+ 
         const response = await fetch("/api/save", {
           method: "POST",
           headers: {
