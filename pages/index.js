@@ -4,7 +4,6 @@ import Question from "../components/Question";
 import Result from "../components/Result";
 import Timer from "../components/Timer";
 import questionsData from "../data/questions.json";
-
 const shuffleArray = (array) => {
   const shuffledArray = [...array];
   for (let i = shuffledArray.length - 1; i > 0; i--) {
