@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 const Result = ({ participant }) => {
-  const [signal,setSignal]=useState("text-gray-400")
-  const [tsignal,setTsignal]=useState(`<p>Sending result. Do not close or switch tab.</p>`)
+  const [state,setState]=useState("Sending result. Do not close or switch tab.")
   const { name, email, usn, score } = participant;
 
   useEffect(() => {
@@ -19,11 +18,10 @@ const Result = ({ participant }) => {
 
         if (response.ok) {
           console.log("Participant data saved successfully");
-          setSignal("text-gray-400 hidden")
+          setState("")
         } else {
           console.error("Failed to save participant data");
-          setSignal("text-gray-400 hidden")
-          setTsignal(`<p classname="text-red-500">Failed to submit Result. Try reattempt</p>`)
+          setState("Failed to submit Result. Try reattempt quiz")
         }
       } catch (error) {
         console.error("Error while sending participant data:", error);
@@ -48,8 +46,8 @@ const Result = ({ participant }) => {
       <p>
         Score: <strong>{score}</strong> out of <strong>100</strong>
       </p>
-      <hr className={signal}/>
-      <p className={signal}>{tsignal}</p>
+      <hr/>
+      <p className="text-gray-500">{state}</p>
     </div>
   );
 };
