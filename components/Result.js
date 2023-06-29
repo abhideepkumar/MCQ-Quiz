@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 const Result = ({ participant }) => {
-  const [state,setState]=useState("Sending result. Do not close or switch tab.")
+  const [state, setState] = useState(
+    "Sending result. Do not close or switch tab."
+  );
   const { name, email, usn, score } = participant;
 
   useEffect(() => {
@@ -8,6 +10,7 @@ const Result = ({ participant }) => {
       console.log("Sending participant data");
       console.log(participant);
       try {
+        console.log("try block off Result");
         const response = await fetch("/api/save", {
           method: "POST",
           headers: {
@@ -15,16 +18,19 @@ const Result = ({ participant }) => {
           },
           body: JSON.stringify(participant),
         });
-
+        console.log("response:", response);
         if (response.ok) {
           console.log("Participant data saved successfully");
-          setState("")
+          setState("");
         } else {
-          console.error("Failed to save participant data");
-          setState("Failed to submit Result. Try reattempt quiz")
+          console.error("Failed to save participant data from result");
+          setState("Failed to submit Result. Try reattempt quiz");
         }
       } catch (error) {
-        console.error("Error while sending participant data:", error);
+        console.error(
+          "Error while sending participant data from result2:",
+          error
+        );
       }
     };
 
@@ -46,7 +52,7 @@ const Result = ({ participant }) => {
       <p>
         Score: <strong>{score}</strong> out of <strong>100</strong>
       </p>
-      <hr/>
+      <hr />
       <p className="text-gray-500">{state}</p>
     </div>
   );
