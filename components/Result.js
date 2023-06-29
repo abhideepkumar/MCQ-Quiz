@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import connectDB from "@/middleware/db";
-
 const Result = ({ participant }) => {
   const [signal,setSignal]=useState("text-gray-400")
+  const [tsignal,setTsignal]=useState(`<p>Sending result. Do not close or switch tab.</p>`)
   const { name, email, usn, score } = participant;
 
   useEffect(() => {
@@ -10,7 +9,6 @@ const Result = ({ participant }) => {
       console.log("Sending participant data");
       console.log(participant);
       try {
-        connectDB();
         const response = await fetch("/api/save", {
           method: "POST",
           headers: {
@@ -24,6 +22,8 @@ const Result = ({ participant }) => {
           setSignal("text-gray-400 hidden")
         } else {
           console.error("Failed to save participant data");
+          setSignal("text-gray-400 hidden")
+          setTsignal(`<p classname="text-red-500">Failed to submit Result. Try reattempt</p>`)
         }
       } catch (error) {
         console.error("Error while sending participant data:", error);
@@ -49,7 +49,7 @@ const Result = ({ participant }) => {
         Score: <strong>{score}</strong> out of <strong>100</strong>
       </p>
       <hr className={signal}/>
-      <p className={signal}>Sending result. Do not close or switch tab.</p>
+      <p className={signal}>{tsignal}</p>
     </div>
   );
 };

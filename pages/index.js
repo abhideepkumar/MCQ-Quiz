@@ -4,7 +4,6 @@ import Question from "../components/Question";
 import Result from "../components/Result";
 import Timer from "../components/Timer";
 import questionsData from "../data/questions.json";
-import connectDB from "@/middleware/db";
 
 const shuffleArray = (array) => {
   const shuffledArray = [...array];
@@ -25,7 +24,6 @@ const IndexPage = () => {
   useEffect(() => {
     const shuffledQuestions = shuffleArray(questionsData);
     setQuestions(shuffledQuestions);
-    connectDB();
   }, []);
 
   const handleSubmitParticipant = (participantData) => {
