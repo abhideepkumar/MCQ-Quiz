@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 const Result = ({ participant }) => {
   const [state, setState] = useState(
@@ -10,16 +11,15 @@ const Result = ({ participant }) => {
       console.log("Sending participant data");
       console.log(participant);
       try {
-        console.log("try block off Result");
-        const response = await fetch("/api/save", {
-          method: "POST",
+        console.log("try block from Result");
+        const response = await axios.post("/api/save", participant, {
           headers: {
             "Content-Type": "application/json",
+            "Cache-Control": "no-cache", // Add cache headers
           },
-          body: JSON.stringify(participant),
         });
         console.log("response:", response);
-        if (response.ok) {
+        if (response.status === 200) {
           console.log("Participant data saved successfully");
           setState("");
         } else {
@@ -33,9 +33,10 @@ const Result = ({ participant }) => {
         );
       }
     };
-
+  
     sendParticipantData();
   }, []);
+  
 
   return (
     <div className="max-w-sm mx-auto p-4 bg-white rounded shadow">

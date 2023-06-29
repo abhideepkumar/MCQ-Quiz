@@ -5,7 +5,8 @@ const handler = async (req, res) => {
   if (req.method === "POST") {
     try {
       const scoreData = req.body;
-      console.log(scoreData)
+      console.log(req)
+      console.log("scoredata from save.js ",scoreData)
       
       const newParticipant = new Participant(scoreData);
       await newParticipant.save();
