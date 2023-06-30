@@ -17,6 +17,7 @@ const Result = ({ participant }) => {
             "Content-Type": "application/json",
             "Cache-Control": "no-cache", // Add cache headers
           },
+          body: JSON.stringify(participant),
         });
         console.log("response:", response);
         if (response.status === 200) {
