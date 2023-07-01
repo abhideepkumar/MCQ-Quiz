@@ -1,5 +1,5 @@
-import connectDB from "@/pages/api/middleware/db";
-import Participant from "@/pages/api/models/Participant";
+import connectDB from "@/middleware/db";
+import Participant from "@/models/Participant";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
