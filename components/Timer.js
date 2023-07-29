@@ -17,7 +17,7 @@ const Timer = ({ time, onTimeExpired, setTime }) => {
     };
   }, [time, onTimeExpired, setTime]);
 
-  return <div>{time}</div>;
+  return <div className='p-2 text-red-500 text-center text-xl'>{time}</div>;
 };
 
 export default Timer;

@@ -5,9 +5,9 @@ const connectDB = (handler) => async (req, res) => {
     return handler(req, res);
   }
   await mongoose.connect(process.env.URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      });
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 };
 
 export default connectDB;

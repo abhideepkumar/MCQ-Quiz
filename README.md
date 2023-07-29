@@ -1,5 +1,3 @@
-### This **red** Project will work fine on localhost but will show 502 bad gateway error because of some error from mongoDB which has no solution till now. If you are able to fix then kindly create an issue and answer it.
-
 # Quiz Web App with Next.js, MongoDB and Tailwind CSS
 
 ## Overview
@@ -70,7 +68,3 @@ quiz-web-app/
 ## Credits
 
 This project was created by [Abhideep Kumar](https://github.com/abhideepkumar).
-
-## License
-
-This project is licensed under the [IDK].
