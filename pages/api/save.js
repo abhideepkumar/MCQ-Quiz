@@ -1,25 +1,34 @@
-import connectDB from "@/middleware/db";
-import Participant from "@/models/Participant";
-
-const handler = async (req, res) => {
-  if (req.method === "POST") {
-    try {
-      const scoreData = req.body;
-      
-      const newParticipant = new Participant(scoreData);
-      await newParticipant.save();
-      
-      console.log("Participant submitted:", scoreData);
-      console.log("Participant data saved successfully!");
-      
-      res.status(200).json({ success: true });
-    } catch (error) {
-      console.error("Error saving participant data:", error);
-      res.status(500).json({ error: "Failed to save participant data" });
-    }
-  } else {
-    res.status(400).json({ error: "This method is not allowed" });
+import axios from "axios";
+export default async function handler(req, res) {
+  const data = req.body;
+  console.log("data received", data);
+  try {
+    const response = await axios.post(
+      process.env.MONGO_API,
+      {
+        collection: "participants",
+        database: "data",
+        dataSource: "Cluster0",
+        document: {
+          name: data.name,
+          USN: data.usn,
+          email: data.email,
+          score: data.score,
+        },
+      },
+      {
+        headers: {
+          apiKey: process.env.MONGO_KEY,
+          "Content-Type": "application/json",
+          "Access-Control-Request-Headers": "*",
+        },
+      }
+    );
+    console.log("response after sending: ", response.data);
+    res.status(200).json(response.data);
+  } catch (error) {
+    console.log("error data sent: ", data);
+    console.error("Error uploading user data:", error);
+    res.status(500).end();
   }
-};
-
-export default connectDB(handler);
+}

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a quiz web application built using Next.js and Tailwind CSS. The application allows participants to take a quiz consisting of multiple-choice questions (MCQs) on the topic of startups. Each question has four options, with only one correct answer. The participants can also provide their personal details, such as name, email, and USN number, before starting the quiz. The quiz is timed, with 15 seconds allotted for each question. After completing the quiz, the participants can view their score.
+This is a quiz web application built using Next.js,Tailwind CSS and Mongodb. The application allows participants to take a quiz consisting of multiple-choice questions (MCQs) on the topic of startups. Each question has four options, with only one correct answer. The participants can also provide their personal details, such as name, email, and USN number, before starting the quiz. The quiz is timed, with 15 seconds allotted for each question. After completing the quiz, the participants can view their score which will be saved to Mongodb server.
 
 ## Features
 
@@ -10,7 +10,7 @@ This is a quiz web application built using Next.js and Tailwind CSS. The applica
 2. Quiz Timer: Each question is timed, and participants have 15 seconds to answer each question.
 3. Multiple-Choice Questions: The quiz consists of multiple-choice questions with four options, only one of which is correct.
 4. Scoring: Each question has a score of 10 points for a correct answer.
-5. Result Display: After completing the quiz, the participants can see their total score.
+5. Result Display: After completing the quiz, the participants can see their total score which will be stored in Mongodb Database.
 
 ## How it Works
 
@@ -24,8 +24,8 @@ This is a quiz web application built using Next.js and Tailwind CSS. The applica
 
 ## Project Setup
 
-1. Clone the repository: `git clone https://github.com/abhideepkumar/quiz/`
-2. Navigate to the project directory: `cd quiz`
+1. Clone the repository: `git clone https://github.com/abhideepkumar/mcq-quiz/`
+2. Navigate to the project directory: `cd mcq-quiz`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm run dev`
 5. Access the app in your web browser at `http://localhost:3000`
@@ -37,33 +37,6 @@ The following major dependencies were used in building this project:
 - Next.js: A React framework for building server-side rendered and statically generated applications.
 - Tailwind CSS: A utility-first CSS framework for building responsive and modern user interfaces.
 - Mongodb: A database management framework
-## File Structure
-
-```
-quiz-web-app/
-├── components/
-│   ├── ParticipantForm.js
-│   ├── Question.js
-│   ├── Result.js
-│   └── Timer.js
-├── data/
-│   └── questions.json
-├── pages/
-│   ├── api/
-│   │   └── save.js
-│   ├── _app.js
-│   ├── index.js
-│   └── quiz.js
-├── public/
-│   └── favicon.ico
-├── styles/
-│   ├── globals.css
-│   └── tailwind.css
-├── .gitignore
-├── next.config.js
-├── package.json
-└── README.md
-```
 
 ## Credits
 

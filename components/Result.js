@@ -44,7 +44,7 @@ const Result = ({ participant }) => {
         USN Number: <strong>{usn}</strong>
       </p>
       <p>
-        Score: <strong>{score}</strong> out of <strong>100</strong>
+        Score: <strong>{score}</strong> out of <strong>200</strong>
       </p>
       <hr/>
       <p className="text-gray-500">{state}</p>

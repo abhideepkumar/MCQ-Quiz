@@ -13,7 +13,7 @@ const shuffleArray = (array) => {
   return shuffledArray;
 };
 
-const IndexPage = () => {
+const Home = () => {
   const [participant, setParticipant] = useState(null);
   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -81,4 +81,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default Home;

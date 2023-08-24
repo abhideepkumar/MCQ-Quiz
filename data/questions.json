@@ -1,113 +1,127 @@
 [
-    {
-      "question": "What is the capital city of Australia?",
-      "options": [
-        "Sydney",
-        "Canberra",
-        "Melbourne",
-        "Perth"
-      ],
-      "correctOption": "Canberra",
-      "score": 10
-    },
-    {
-      "question": "Which planet is known as the Red Planet?",
-      "options": [
-        "Mars",
-        "Venus",
-        "Jupiter",
-        "Saturn"
-      ],
-      "correctOption": "Mars",
-      "score": 10
-    },
-    {
-      "question": "Who is the author of the Harry Potter book series?",
-      "options": [
-        "J.K. Rowling",
-        "Stephen King",
-        "George R.R. Martin",
-        "Dan Brown"
-      ],
-      "correctOption": "J.K. Rowling",
-      "score": 10
-    },
-    {
-      "question": "What is the largest ocean in the world?",
-      "options": [
-        "Pacific Ocean",
-        "Atlantic Ocean",
-        "Indian Ocean",
-        "Arctic Ocean"
-      ],
-      "correctOption": "Pacific Ocean",
-      "score": 10
-    },
-    {
-      "question": "Which country is known for producing the most coffee in the world?",
-      "options": [
-        "Brazil",
-        "Colombia",
-        "Vietnam",
-        "Ethiopia"
-      ],
-      "correctOption": "Brazil",
-      "score": 10
-    },
-    {
-      "question": "Who painted the Mona Lisa?",
-      "options": [
-        "Leonardo da Vinci",
-        "Pablo Picasso",
-        "Vincent van Gogh",
-        "Michelangelo"
-      ],
-      "correctOption": "Leonardo da Vinci",
-      "score": 10
-    },
-    {
-      "question": "Which animal is known as the 'King of the Jungle'?",
-      "options": [
-        "Lion",
-        "Tiger",
-        "Elephant",
-        "Giraffe"
-      ],
-      "correctOption": "Lion",
-      "score": 10
-    },
-    {
-      "question": "What is the chemical symbol for the element Gold?",
-      "options": [
-        "Go",
-        "Gd",
-        "Au",
-        "Ag"
-      ],
-      "correctOption": "Au",
-      "score": 10
-    },
-    {
-      "question": "Who is the lead vocalist of the band 'Queen'?",
-      "options": [
-        "Freddie Mercury",
-        "John Lennon",
-        "Paul McCartney",
-        "Mick Jagger"
-      ],
-      "correctOption": "Freddie Mercury",
-      "score": 10
-    },
-    {
-      "question": "Which sport is known as the 'gentleman's game'?",
-      "options": [
-        "Cricket",
-        "Football",
-        "Tennis",
-        "Golf"
-      ],
-      "correctOption": "Cricket",
-      "score": 10
-    }
-  ]
-  
+  {
+    "question": "What does HTML stand for?",
+    "options": ["Hyper Text Markup Language", "High Tech Modern Language", "Hyperlink and Text Markup Language", "Hyper Transfer Markup Language"],
+    "correctOption": "Hyper Text Markup Language",
+    "score": 10
+  },
+  {
+    "question": "What is the primary purpose of CSS in web development?",
+    "options": ["Adding interactivity", "Managing server-side logic", "Styling and layout", "Handling database operations"],
+    "correctOption": "Styling and layout",
+    "score": 10
+  },
+  {
+    "question": "Which programming language is often referred to as the 'language of the web'?",
+    "options": ["Python", "Java", "JavaScript", "C++"],
+    "correctOption": "JavaScript",
+    "score": 10
+  },
+  {
+    "question": "What is the process of finding and fixing bugs in a program called?",
+    "options": ["Debugging", "Testing", "Compiling", "Analyzing"],
+    "correctOption": "Debugging",
+    "score": 10
+  },
+  {
+    "question": "Which company developed the Android operating system?",
+    "options": ["Apple", "Google", "Microsoft", "Amazon"],
+    "correctOption": "Google",
+    "score": 10
+  },
+  {
+    "question": "What does API stand for in programming?",
+    "options": ["All Purpose Interface", "Application Programming Interface", "Automated Process Integration", "Advanced Programming Interface"],
+    "correctOption": "Application Programming Interface",
+    "score": 10
+  },
+  {
+    "question": "Who is the co-founder of Microsoft?",
+    "options": ["Steve Jobs", "Bill Gates", "Elon Musk", "Mark Zuckerberg"],
+    "correctOption": "Bill Gates",
+    "score": 10
+  },
+  {
+    "question": "Which programming language is known for its use in machine learning and data analysis?",
+    "options": ["Java", "Python", "C#", "Ruby"],
+    "correctOption": "Python",
+    "score": 10
+  },
+  {
+    "question": "What does the abbreviation 'SEO' stand for?",
+    "options": ["Search Engine Operation", "Secure Encryption Online", "Site Enhancement Outreach", "Search Engine Optimization"],
+    "correctOption": "Search Engine Optimization",
+    "score": 10
+  },
+  {
+    "question": "What is the process of turning a design into a functional website called?",
+    "options": ["Designing", "Styling", "Coding", "Rendering"],
+    "correctOption": "Coding",
+    "score": 10
+  },
+  {
+    "question": "What does the acronym 'HTTP' stand for?",
+    "options": [
+      "Hyper Text Transfer Protocol",
+      "High Tech Text Protocol",
+      "Home Transfer and Text Protocol",
+      "Hyperlink Technology Transfer Protocol"
+    ],
+    "correctOption": "Hyper Text Transfer Protocol",
+    "score": 10
+  },
+  {
+    "question": "Which programming language is commonly used for developing mobile applications?",
+    "options": ["Python", "Ruby", "Swift", "C#"],
+    "correctOption": "Swift",
+    "score": 10
+  },
+  {
+    "question": "What does 'IoT' stand for?",
+    "options": ["Internet of Things", "Input Output Technology", "Integrated Online Tools", "Internet Over Time"],
+    "correctOption": "Internet of Things",
+    "score": 10
+  },
+  {
+    "question": "Who is the CEO of Tesla and SpaceX?",
+    "options": ["Mark Zuckerberg", "Elon Musk", "Tim Cook", "Jeff Bezos"],
+    "correctOption": "Elon Musk",
+    "score": 10
+  },
+  {
+    "question": "In programming, what does 'OOP' stand for?",
+    "options": ["Object-Oriented Programming", "Open Output Protocol", "Operating Overhead Performance", "Order of Operations Procedure"],
+    "correctOption": "Object-Oriented Programming",
+    "score": 10
+  },
+  {
+    "question": "What is the term for a small piece of code that performs a specific task and can be reused?",
+    "options": ["Loop", "Function", "Module", "Class"],
+    "correctOption": "Function",
+    "score": 10
+  },
+  {
+    "question": "Which technology enables users to interact with digital environments in a more natural way, often using gestures?",
+    "options": ["Virtual Reality", "Augmented Reality", "Artificial Intelligence", "Natural Language Processing"],
+    "correctOption": "Augmented Reality",
+    "score": 10
+  },
+  {
+    "question": "What does 'UX' stand for in design?",
+    "options": ["User Experience", "User Exchange", "User Expertise", "Universal Experience"],
+    "correctOption": "User Experience",
+    "score": 10
+  },
+  {
+    "question": "Which popular version control system is used to track changes in source code during software development?",
+    "options": ["Git", "SVN", "Mercurial", "Perforce"],
+    "correctOption": "Git",
+    "score": 10
+  },
+  {
+    "question": "Who is the founder of Amazon?",
+    "options": ["Jeff Bezos", "Bill Gates", "Elon Musk", "Larry Page"],
+    "correctOption": "Jeff Bezos",
+    "score": 10
+  }
+]
